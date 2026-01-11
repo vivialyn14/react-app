@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+import "./Search.css";
+
 export default function Search() {
   let [city, setCity] = useState("");
   let [weather, setWeather] = useState("");
@@ -37,13 +39,15 @@ export default function Search() {
     ];
 
     weatherMessage = (
-      <ul>
-        {items.map((item) => (
-          <li key={item.label}>
-            {item.label}: {item.value}
-          </li>
-        ))}
-      </ul>
+      <div className="weather-message">
+        <ul>
+          {items.map((item) => (
+            <li key={item.label}>
+              {item.label}: {item.value}
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   } else {
     weatherMessage = "";

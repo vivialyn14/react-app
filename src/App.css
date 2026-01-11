@@ -3,10 +3,9 @@
   text-align: center;
 }
 
-ul {
+footer {
   text-align: center;
-}
-
-li {
-  text-align: left;
+  color: grey;
+  opacity: 0.7;
+  font-size: small;
 }
